@@ -132,13 +132,13 @@ Das Protokoll ist verbindungslos und Request-Response- (Master-Slave) -orientier
 | Wert | Formel |
 | ---- | ------ |
 | n_motor = | 60,000,000 / t_motor |
-| n_walze = | 60,000,000 / (26 \* t_walze) |
+| n_roller = | 60,000,000 / (26 \* t_roller) |
 | ω_motor = | (2π/60) \* n_motor |
-| ω_walze = | (2π/60) \* n_walze |
-| v_walze = | ω_walze \* r_walze |
-| Δω = | ω_walze(i) - ω_walze(i-1) |
-| α_walze = | Δω / t(i) |
-| P_Rad = | I_Walze \* α_walze \* ω_walze |
-| P_Motor = | P_Rad + P_Schlepp |
-| P_Norm = | (1013 / p_Luft) \* sqrt((T_Luft+273.15)/293.15) \* P_Motor |
+| ω_roller = | (2π/60) \* n_roller |
+| v_roller = | ω_roller \* r_roller |
+| Δω = | ω_roller(i) - ω_roller(i-1) |
+| α_roller = | Δω / t(i) |
+| P_Rad = | I_roller \* α_roller \* ω_roller |
+| P_Motor = | P_Rad + P_pull |
+| P_Norm = | (1013 / p_air) \* sqrt((T_sir+273.15)/293.15) \* P_Motor |
 | M_Motor = | P_Norm / ω_motor |
